@@ -20,10 +20,10 @@
           </ul>
         </nav>
         <div class="header-text">
-          <p>Multimedia Designer</p>
+          <p>Multimedia Designer Student | Frontend</p>
           <h1>
             Hi, I'm <span>Steffen Krøyer </span><br />
-            Welcome to my Website
+            Welcome To My Website
           </h1>
         </div>
       </div>
@@ -34,24 +34,53 @@
         <div class="row">
           <div class="about-col-1"><img src="images-2/selvportrat.png" alt="palceholdre" /></div>
           <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
+            <h2 class="sub-title">About <span>me</span></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deleniti laborum reiciendis, illo dolorem facilis eum asperiores doloribus dignissimos optio earum praesentium dolorum cum perferendis nesciunt ducimus, consectetur enim? Distinctio.</p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('job')">Jobs</p>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents active-tab" id="skills">
               <ul>
                 <li><span>UI/UX</span><br />Lorem ipsum dolor sit amet.</li>
                 <li><span>Web Development</span><br />Lorem ipsum dolor sit amet.</li>
-                <li><span>Foto/Vidoes</span><br />Lorem ipsum dolor sit amet.</li>
+                <li><span>Concept Development</span><br />Lorem ipsum dolor sit amet.</li>
+                <li><span>Foto/Vidoes Editing</span><br />Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>HTML</span><br />
+                  I possess a proficient understanding of HTML, the markup language that forms the backbone of websites, and with my knowledge and skills in HTML, I am able to create visually appealing and functional websites that effectively convey information and engage with their intended audience and are user-friendly.
+                </li>
+                <li><span>CSS</span><br />I have a reasonable level of knowledge and understanding within CSS, which is sufficient to be able to work effectively with the styling of web pages. I am able to apply basic CSS rules and properties to customize the design and layout of a web page. I am also familiar with advanced CSS techniques, such as responsive design and CSS Grid, which can help optimize the user experience on different devices and screen sizes.</li>
+                <li><span>JavaScript</span><br />Since I have recently started working with JavaScript, my understanding of this programming language is still in its early stages. While I have a basic familiarity with some of the core concepts and syntax, I am still learning and exploring the language's capabilities and how it can be used to create dynamic and interactive web applications.</li>
+                <li><span>Adobi XD</span><br />Lorem ipsum dolor sit amet.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2022-20??</span><br />KEA - Multimedia designer | Frontend</li>
+                <li><span>2019-2021</span><br />KVUC - 2-year HF</li>
+                <li><span>2014-2016</span><br />VUC Køge - Almen Voksenuddannelse, (AVU)</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="job">
+              <ul>
+                <li><span>2013 - 2014</span><br />Netto - Køge</li>
+                <li><span>2011-2012</span><br />7-Eleven - Køge</li>
+                <li><span>Autumn 2011 - spring 2011</span><br />Roskilde viking museum</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
