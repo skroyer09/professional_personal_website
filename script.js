@@ -1,4 +1,4 @@
-/* chat GPT helped with setteing this part of the code op */
+/* chat GPT helped with setteing tablink and tabcontent op and running */
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
