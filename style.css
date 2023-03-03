@@ -1,3 +1,4 @@
+/* ChatGPT help with making transitions and background animation */
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: linear-gradient(60deg, #080808 50%, #485563 100%);
+  background-image: linear-gradient(to right, #080808 50%, #485563 100%);
   background-size: 400% 400%;
-  animation: background-animation 40s ease-in-out infinite;
+  animation: background-animation 30s ease-in-out infinite;
   color: #fff;
 }
 
@@ -70,6 +75,10 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
   width: 100%;
+}
+
+nav .fa-solid {
+  display: none;
 }
 
 .header-text {
@@ -169,7 +178,6 @@ h2 span {
 }
 
 /*------Work------*/
-/* ChatGPT help with making transition for det backgrounds */
 
 #work {
   padding: 30px 0;
@@ -220,18 +228,15 @@ h2 span {
   margin-top: 100px;
 }
 
-.contact-left {
+.contact-info {
   flex-basis: 35%;
 }
-.contact-right {
-  flex-basis: 60%;
-}
 
-.contact-left p {
+.contact-info p {
   margin-top: 15px;
 }
 
-.contact-left p i {
+.contact-info p i {
   color: #ff004f;
   margin-right: 25px;
   font-size: 25px;
@@ -273,10 +278,6 @@ h2 span {
   color: #080808;
 }
 
-.contact-right form {
-  width: 100%;
-}
-
 /*------Footer------*/
 
 .copy {
@@ -285,4 +286,73 @@ h2 span {
   padding: 25px 0;
   font-weight: 300;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    height: 60vh;
+  }
+
+  .header-text {
+    margin-top: 50%;
+    font-size: 22px;
+  }
+  .header-text h1 {
+    font-size: 28px;
+  }
+
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+
+  .about-col-2 {
+    font-size: 14px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .contact-info {
+    flex-basis: 100%;
+  }
 }

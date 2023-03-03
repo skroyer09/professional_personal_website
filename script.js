@@ -1,4 +1,4 @@
-/* chat GPT helped with setteing tablink and tabcontent op and running */
+/* chat GPT helped with setteing tablink and tabcontent op and running and makeing the open/closemenu */
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -11,4 +11,14 @@ function opentab(tabname) {
   }
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
+}
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+  sidemenu.style.right = "0";
+}
+
+function closemenu() {
+  sidemenu.style.right = "-200px";
 }

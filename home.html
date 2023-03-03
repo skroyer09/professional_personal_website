@@ -12,13 +12,15 @@
     <div id="header">
       <div class="container">
         <nav>
-          <img src="images-2/logo3.png" class="logo" alt="a logo" />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">Portfolio</a></li>
+          <a href="home.html"><img src="images-2/logo3.png" class="logo" alt="a logo" /></a>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>Multimedia Designer Student | Frontend</p>
@@ -93,19 +95,19 @@
             <i class="fa-solid fa-code"></i>
             <h3>Web Development</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolore illo dignissimos dolorem inventore.</p>
-            <a href="#">Learn more</a>
+            <a href="web.html">Learn more</a>
           </div>
           <div>
             <i class="fa-solid fa-crop-simple"></i>
             <h3>UI/UX Design</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolore illo dignissimos dolorem inventore.</p>
-            <a href="#">Learn more</a>
+            <a href="uiux.html">Learn more</a>
           </div>
           <div>
             <i class="fa-solid fa-scissors"></i>
             <h3>Foto/Videos</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolore illo dignissimos dolorem inventore.</p>
-            <a href="#">Learn more</a>
+            <a href="fotovideo.html">Learn more</a>
           </div>
         </div>
       </div>
@@ -115,7 +117,7 @@
     <div id="contact">
       <div class="container">
         <div class="row">
-          <div class="contact-left">
+          <div class="contact-info">
             <h2 class="sub-title">Contact <span>Me</span></h2>
             <p><i class="fa-solid fa-envelope"></i> skroyer09@gmail.com</p>
             <p><i class="fa-sharp fa-solid fa-mobile"></i> 45+53380305</p>
@@ -126,7 +128,6 @@
             </div>
             <a href="images-2/CV-Steffen.pdf" download class="btn">Download CV</a>
           </div>
-          <div class="contact-right"></div>
         </div>
       </div>
     </div>
