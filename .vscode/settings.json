@@ -1,4 +1,5 @@
 {
   "editor.wordWrapColumn": 87,
-  "editor.wordWrap": "wordWrapColumn"
+  "editor.wordWrap": "wordWrapColumn",
+  "liveServer.settings.port": 5501
 }

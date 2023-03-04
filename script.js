@@ -1,4 +1,5 @@
 /* chat GPT helped with setteing tablink and tabcontent op and running and makeing the open/closemenu */
+
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
