@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="shortcut icon" href="favi" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/9d888131a3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="home.html"><img src="images-2/logo3.png" class="logo" alt="a logo" /></a>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">Gallery</a></li>
+            <li><a href="#contact">contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text-np">
+          <h1>NintendoPusher</h1>
+          <p>
+            In Theme 10, we had the opportunity to work with Nintendopusher, a company seeking to update its online presence to better reflect its brand and enhance the user experience for its customers. Our task was to assist them in updating their visual identity on their existing website, which involved developing a more modern and cohesive design that aligned with their brand values and mission.<br />
+
+            <br />Moreover, we were also tasked with improving the overall user experience by streamlining the website's navigation and functionality. This included enhancing the site's search capabilities and making it easier for customers to find what they were looking for quickly. <br />
+
+            <br />Additionally, we worked on a more efficient social media strategy that would help the company attract and retain a larger customer base. This involved analyzing their target audience, creating engaging content that aligned with their brand, and identifying the best social media platforms to reach their audience.
+          </p>
+          <a href="https://vijasan.dk/kea/10_eksamen/nintendopusheren/" class="btn">Check out the work we did!</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="row"></div>
+        <div class="about-col-2">
+          <h2 class="sub-title-np">Gallery</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="images-2/xd.png" alt="Image 1" />
+      <img src="images-2/mood.png" alt="Image 2" />
+      <img src="images-2/style.png" alt="Image 3" />
+      <img src="images-2/logo2.png" alt="Image 4" />
+      <img src="images-2/ig.png" alt="Image 5" />
+      <img src="images-2/piex.png" alt="Image 5" />
+    </div>
+
+    <div class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" />
+    </div>
+
+    <!-----Contact------>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-info">
+            <h2 class="sub-title">Contact <span>Me</span></h2>
+            <p><i class="fa-solid fa-envelope"></i>skroyer09@gmail.com</p>
+            <p><i class="fa-sharp fa-solid fa-mobile"></i>53380305</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/steffen-krøyer-530847230/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/steffenkroyer/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="images-2/CV-Steffen.pdf" download class="btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* code won't work when linked to a aonther file for some reason */
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+
+      /* gallery */
+
+      const gallery = document.querySelector(".gallery");
+      const images = gallery.querySelectorAll("img");
+      const modal = document.querySelector(".modal");
+      const modalImg = document.querySelector(".modal-content");
+      const closeBtn = document.querySelector(".close");
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = img.src;
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+  <footer>
+    <p class="copy">Copytight © skroyer-design.dk</p>
+  </footer>
+</html>
