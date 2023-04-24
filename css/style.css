@@ -11,8 +11,9 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to left, #d62a47 65%, #104b63);
+  background-image: linear-gradient(to right, #262b2a 50%, #36445a 100%);
   background-size: 400% 400%;
+  animation: background-animation 30s ease-in-out infinite;
   color: #fff;
 }
 
