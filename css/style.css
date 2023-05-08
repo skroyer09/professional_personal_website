@@ -351,11 +351,11 @@ li span {
 
 @media screen and (max-width: 600px) {
   #header {
-    height: 60vh;
+    height: 80vh;
   }
 
   .header-text {
-    margin-top: 50%;
+    margin-top: 30%;
     font-size: 22px;
   }
   .header-text h1 {
